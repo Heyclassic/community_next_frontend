@@ -10,6 +10,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import { CardActionArea } from '@material-ui/core';
+import Link from 'next/link';
 
 
 const useStyles = makeStyles({
@@ -41,7 +42,7 @@ const useStyles = makeStyles({
     });
 
 
-export default function ProductsCard({product, key, maker, comments, image, tags, votes}) {
+export default function ProductsCard({product, key, maker, comments, image, tags, votes, link}) {
 
   const classes = useStyles();
   const theme = useTheme();
