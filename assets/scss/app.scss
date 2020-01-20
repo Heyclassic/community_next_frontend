@@ -49,8 +49,11 @@ body {
 
   .MuiSvgIcon-fontSizeSmall {
     font-size: 1.3rem;
+    padding-left: 6px;
   }
-
+  .MuiButton-label {
+    padding-right: 10px;
+  }
   .tag {
     width: auto;
     height: 25px;
