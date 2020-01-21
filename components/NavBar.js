@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import HomeLink from 'next/link';
+import Link from '@material-ui/core/link'
 
 const useStyles = makeStyles({
     root: {
@@ -17,6 +19,9 @@ const useStyles = makeStyles({
     title: {
       flexGrow: 1,
     },
+    link: {
+      color: 'white !important'
+    }
   });
 
 export default function NavBar() {
@@ -29,9 +34,11 @@ export default function NavBar() {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h5" className={classes.title}>
-            Heyclassic Community
-          </Typography>
+          <HomeLink href="/">
+            <Typography variant="h5" className={classes.title}>
+              <Link className={classes.link}>Heyclassic Community</Link>
+            </Typography>
+          </HomeLink>
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>

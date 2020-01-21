@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next -p 8080",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cy:run": "cypress run",
+    "test": "start-server-and-test start http-get://localhost:8080 cy:run"
   },
   "dependencies": {
     "@material-ui/core": "^4.8.3",
@@ -13,10 +15,12 @@
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.19.1",
     "cypress": "^3.8.2",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "9.1.7",
     "node-sass": "^4.13.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "react-lorem-ipsum": "^1.4.4"
+    "react-lorem-ipsum": "^1.4.4",
+    "start-server-and-test": "^1.10.6"
   }
 }

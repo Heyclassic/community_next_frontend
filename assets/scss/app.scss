@@ -3,6 +3,13 @@ body {
   background-size: 100%;
   background-attachment: fixed;
 }
+
+.MuiLink-underlineHover:hover, .link:hover {
+  text-decoration: none !important;
+  color: rgb(62, 59, 59);
+  cursor: pointer;
+}
+
 @media (min-width: 996px) {
   header {
     margin-bottom: 2.5rem;
@@ -10,9 +17,9 @@ body {
   header h1{
     padding-left: 1.7rem;
   }
-  .MuiTypography-h4 {
-    padding-bottom: 1rem;
-  }
+  // .MuiTypography-h4 {
+  //   padding-bottom: 1rem;
+  // }
   .products, .news {
     padding-top: 5rem;
   }
