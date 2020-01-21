@@ -10,6 +10,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import { CardActionArea } from '@material-ui/core';
+import NextLink from 'next/link';
+import Link from '@material-ui/core/link';
 
 
 const useStyles = makeStyles({
@@ -41,7 +43,7 @@ const useStyles = makeStyles({
     });
 
 
-export default function ProductsCard({product, key, maker, comments, image, tags, votes}) {
+export default function ProductsCard({product, key, maker, comments, image, tags, votes, link}) {
 
   const classes = useStyles();
   const theme = useTheme();
@@ -55,10 +57,12 @@ export default function ProductsCard({product, key, maker, comments, image, tags
         />
         <div className={classes.details}>
           <CardContent className={classes.content}>
-          <Typography variant="subtitle2" color="textSecondary" className={classes.added}>Added on {product.attributes.added}</Typography>
-            <Typography component="h6" variant="h6">
-              {product.attributes.name}
-            </Typography>
+            <Typography variant="subtitle2" color="textSecondary" className={classes.added}>Added on {product.attributes.added}</Typography>
+            <NextLink href="/product/[id]" as={`/product/${product.id}`}>
+              <Typography component="h6" variant="h6">
+                  <Link>{product.attributes.name}</Link>
+              </Typography>
+            </NextLink>
             <Typography variant="subtitle1" color="textSecondary">
               {maker}
             </Typography>
