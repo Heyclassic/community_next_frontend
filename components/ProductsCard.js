@@ -11,7 +11,7 @@ import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import { CardActionArea } from '@material-ui/core';
 import NextLink from 'next/link';
-import Link from '@material-ui/core/link';
+import Link from '@material-ui/core/Link';
 
 
 const useStyles = makeStyles({

@@ -77,4 +77,12 @@ body {
   .tag-title {
         margin-top: 3px;
     }
+
+    // SIGNUP FORM
+    .form-wrapper {
+      display: flex;
+      margin-top: 64px;
+      align-items: center;
+      flex-direction: column;
+    }
 }

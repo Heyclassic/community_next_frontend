@@ -7,7 +7,9 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import HomeLink from 'next/link';
-import Link from '@material-ui/core/link'
+import Link from '@material-ui/core/Link'
+import LoginLink from 'next/link'
+import { auth } from '../utils/auth'
 
 const useStyles = makeStyles({
     root: {
@@ -39,7 +41,7 @@ export default function NavBar() {
               <Link className={classes.link}>Heyclassic Community</Link>
             </Typography>
           </HomeLink>
-          <Button color="inherit">Login</Button>
+          <LoginLink href="/login"><Button color="inherit">Login</Button></LoginLink>
         </Toolbar>
       </AppBar>
     </div>

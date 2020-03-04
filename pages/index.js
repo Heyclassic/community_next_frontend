@@ -9,7 +9,7 @@ import ProductsCard from '../components/ProductsCard';
 import axios from 'axios';
 import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
 
-const API_URL= "http://localhost:3000"
+import { API_URL } from '../config'
 
 const Index = props => (
     <div className="App">
